@@ -16,6 +16,7 @@ import 'package:spotube/utils/service_utils.dart';
 class PlayerTrackDetails extends HookConsumerWidget {
   final Color? color;
   final Track? track;
+
   const PlayerTrackDetails({super.key, this.color, this.track});
 
   @override

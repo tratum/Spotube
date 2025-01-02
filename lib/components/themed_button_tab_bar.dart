@@ -6,6 +6,7 @@ import 'package:spotube/hooks/utils/use_brightness_value.dart';
 class ThemedButtonsTabBar extends HookWidget implements PreferredSizeWidget {
   final List<Widget> tabs;
   final TabController? controller;
+
   const ThemedButtonsTabBar({super.key, required this.tabs, this.controller});
 
   @override

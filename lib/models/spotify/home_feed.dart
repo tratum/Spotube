@@ -2,6 +2,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:spotify/spotify.dart';
 
 part 'home_feed.freezed.dart';
+
 part 'home_feed.g.dart';
 
 @freezed

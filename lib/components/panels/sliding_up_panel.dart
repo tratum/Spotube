@@ -8,7 +8,7 @@ Licensing: More information can be found here: https://github.com/Zotov-VD/slidi
 This product includes software developed by Akshath Jain (https://akshathjain.com)
 */
 
-library panels;
+library;
 
 import 'dart:math';
 
@@ -18,6 +18,7 @@ import 'package:flutter/physics.dart';
 import 'package:flutter/rendering.dart';
 
 part 'controller.dart';
+
 part 'helpers.dart';
 
 enum SlideDirection { up, down }

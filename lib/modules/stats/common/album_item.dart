@@ -10,6 +10,7 @@ import 'package:spotube/utils/service_utils.dart';
 class StatsAlbumItem extends StatelessWidget {
   final AlbumSimple album;
   final Widget info;
+
   const StatsAlbumItem({super.key, required this.album, required this.info});
 
   @override

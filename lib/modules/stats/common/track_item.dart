@@ -9,6 +9,7 @@ import 'package:spotube/utils/service_utils.dart';
 class StatsTrackItem extends StatelessWidget {
   final Track track;
   final Widget info;
+
   const StatsTrackItem({
     super.key,
     required this.track,

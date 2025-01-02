@@ -9,6 +9,7 @@ import 'package:spotube/extensions/image.dart';
 class SimpleTrackTile extends HookWidget {
   final Track track;
   final VoidCallback? onDelete;
+
   const SimpleTrackTile({
     super.key,
     required this.track,

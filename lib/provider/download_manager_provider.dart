@@ -82,6 +82,7 @@ class DownloadManagerProvider extends ChangeNotifier {
 
   String get downloadDirectory =>
       ref.read(userPreferencesProvider.select((s) => s.downloadLocation));
+
   SourceCodecs get downloadCodec =>
       ref.read(userPreferencesProvider.select((s) => s.downloadMusicCodec));
 
@@ -96,6 +97,7 @@ class DownloadManagerProvider extends ChangeNotifier {
       .length;
 
   final Set<SourcedTrack> $history;
+
   // these are the tracks which metadata hasn't been fetched yet
   final Set<Track> $backHistory;
   final DownloadManager dl;

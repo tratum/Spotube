@@ -1,4 +1,4 @@
-library song_link;
+library;
 
 import 'dart:convert';
 
@@ -10,10 +10,12 @@ import 'package:html/parser.dart';
 part 'model.dart';
 
 part 'song_link.freezed.dart';
+
 part 'song_link.g.dart';
 
 abstract class SongLinkService {
   static final dio = Dio();
+
   static Future<List<SongLink>> links(String spotifyId) async {
     try {
       final res = await dio.get(

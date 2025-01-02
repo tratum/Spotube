@@ -4,9 +4,8 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 import 'package:spotube/collections/formatters.dart';
 import 'package:spotube/components/titlebar/titlebar.dart';
-import 'package:spotube/modules/stats/common/track_item.dart';
 import 'package:spotube/extensions/context.dart';
-
+import 'package:spotube/modules/stats/common/track_item.dart';
 import 'package:spotube/provider/history/top.dart';
 import 'package:spotube/provider/history/top/tracks.dart';
 import 'package:spotube/provider/spotify/spotify.dart';

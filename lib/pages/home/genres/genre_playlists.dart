@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:gap/gap.dart';
@@ -6,20 +7,20 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 import 'package:spotify/spotify.dart' hide Offset;
 import 'package:spotube/collections/fake.dart';
-import 'package:spotube/hooks/utils/use_custom_status_bar_color.dart';
-import 'package:spotube/modules/playlist/playlist_card.dart';
 import 'package:spotube/components/image/universal_image.dart';
 import 'package:spotube/components/titlebar/titlebar.dart';
 import 'package:spotube/components/waypoint.dart';
 import 'package:spotube/extensions/constrains.dart';
+import 'package:spotube/hooks/utils/use_custom_status_bar_color.dart';
+import 'package:spotube/modules/playlist/playlist_card.dart';
 import 'package:spotube/provider/spotify/spotify.dart';
-import 'package:collection/collection.dart';
 import 'package:spotube/utils/platform.dart';
 
 class GenrePlaylistsPage extends HookConsumerWidget {
   static const name = "genre_playlists";
 
   final Category category;
+
   const GenrePlaylistsPage({super.key, required this.category});
 
   @override

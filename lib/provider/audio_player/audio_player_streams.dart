@@ -21,6 +21,7 @@ import 'package:spotube/services/logger/logger.dart';
 class AudioPlayerStreamListeners {
   final Ref ref;
   late final AudioServices notificationService;
+
   AudioPlayerStreamListeners(this.ref) {
     AudioServices.create(ref, ref.read(audioPlayerProvider.notifier)).then(
       (value) => notificationService = value,
@@ -42,9 +43,13 @@ class AudioPlayerStreamListeners {
   }
 
   ScrobblerNotifier get scrobbler => ref.read(scrobblerProvider.notifier);
+
   UserPreferences get preferences => ref.read(userPreferencesProvider);
+
   DiscordNotifier get discord => ref.read(discordProvider.notifier);
+
   AudioPlayerState get audioPlayerState => ref.read(audioPlayerProvider);
+
   PlaybackHistoryActions get history =>
       ref.read(playbackHistoryActionsProvider);
 

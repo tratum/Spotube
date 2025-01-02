@@ -5,11 +5,13 @@ final htmlEscape = HtmlUnescape();
 
 extension UnescapeHtml on String {
   String cleanHtml() => parse("<p>$this</p>").documentElement!.text;
+
   String unescapeHtml() => htmlEscape.convert(this);
 }
 
 extension NullableUnescapeHtml on String? {
   String? cleanHtml() => this?.cleanHtml();
+
   String? unescapeHtml() => this?.unescapeHtml();
 }
 

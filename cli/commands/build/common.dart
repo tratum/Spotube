@@ -9,6 +9,7 @@ import '../../core/env.dart';
 
 mixin BuildCommandCommonSteps on Command {
   final shell = Shell();
+
   Directory get cwd => Directory.current;
 
   Pubspec? _pubspec;

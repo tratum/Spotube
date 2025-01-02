@@ -8,6 +8,7 @@ import 'package:spotube/extensions/context.dart';
 class SortTracksDropdown extends StatelessWidget {
   final SortBy? value;
   final void Function(SortBy)? onChanged;
+
   const SortTracksDropdown({
     this.onChanged,
     this.value,

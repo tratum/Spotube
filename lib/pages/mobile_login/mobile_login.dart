@@ -3,12 +3,12 @@ import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:spotube/components/titlebar/titlebar.dart';
-
 import 'package:spotube/provider/authentication/authentication.dart';
 import 'package:spotube/utils/platform.dart';
 
 class WebViewLogin extends HookConsumerWidget {
   static const name = "login";
+
   const WebViewLogin({super.key});
 
   @override

@@ -14,6 +14,7 @@ import 'package:spotube/provider/spotify/spotify.dart';
 
 class GenrePage extends HookConsumerWidget {
   static const name = "genre";
+
   const GenrePage({super.key});
 
   @override

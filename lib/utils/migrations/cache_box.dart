@@ -10,6 +10,7 @@ import 'package:spotube/utils/primitive_utils.dart';
 const kKeyBoxName = "spotube_box_name";
 const kNoEncryptionWarningShownKey = "showedNoEncryptionWarning";
 const kIsUsingEncryption = "isUsingEncryption";
+
 String getBoxKey(String boxName) => "spotube_box_$boxName";
 
 class PersistenceCacheBox<T> {

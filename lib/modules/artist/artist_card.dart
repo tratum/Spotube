@@ -15,6 +15,7 @@ import 'package:spotube/utils/service_utils.dart';
 
 class ArtistCard extends HookConsumerWidget {
   final Artist artist;
+
   const ArtistCard(this.artist, {super.key});
 
   @override

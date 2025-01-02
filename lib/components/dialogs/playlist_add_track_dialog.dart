@@ -14,6 +14,7 @@ class PlaylistAddTrackDialog extends HookConsumerWidget {
   /// The id of the playlist this dialog was opened from
   final String? openFromPlaylist;
   final List<Track> tracks;
+
   const PlaylistAddTrackDialog({
     required this.tracks,
     required this.openFromPlaylist,
@@ -64,7 +65,13 @@ class PlaylistAddTrackDialog extends HookConsumerWidget {
             tracks.map((e) => e.id!).toList(),
           ),
         ),
-      ).then((_) => Navigator.pop(context, true));
+      ).then(
+        (value) {
+          if (context.mounted) {
+            Navigator.pop(context, true);
+          }
+        },
+      );
     }
 
     return AlertDialog(

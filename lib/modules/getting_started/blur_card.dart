@@ -5,6 +5,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class BlurCard extends HookConsumerWidget {
   final Widget child;
+
   const BlurCard({super.key, required this.child});
 
   @override

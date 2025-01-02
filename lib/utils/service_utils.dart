@@ -1,36 +1,32 @@
+import 'dart:async';
 import 'dart:typed_data';
 
+import 'package:collection/collection.dart';
 import 'package:dio/dio.dart';
+import 'package:flutter/material.dart' hide Element;
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:html/dom.dart' hide Text;
+import 'package:html/parser.dart' as parser;
+import 'package:package_info_plus/package_info_plus.dart';
 import 'package:spotify/spotify.dart';
+import 'package:spotube/collections/env.dart';
+import 'package:spotube/models/lyrics.dart';
 import 'package:spotube/modules/library/user_local_tracks.dart';
 import 'package:spotube/modules/root/update_dialog.dart';
-
-import 'package:spotube/models/lyrics.dart';
 import 'package:spotube/provider/database/database.dart';
 import 'package:spotube/services/dio/dio.dart';
 import 'package:spotube/services/logger/logger.dart';
 import 'package:spotube/services/sourced_track/sourced_track.dart';
-
 import 'package:spotube/utils/primitive_utils.dart';
-import 'package:collection/collection.dart';
-import 'package:html/parser.dart' as parser;
-
-import 'dart:async';
-
-import 'package:flutter/material.dart' hide Element;
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:package_info_plus/package_info_plus.dart';
-import 'package:spotube/collections/env.dart';
-
 import 'package:version/version.dart';
 
 abstract class ServiceUtils {
   static final _englishMatcherRegex = RegExp(
     "^[a-zA-Z0-9\\s!\"#\$%&\\'()*+,-.\\/:;<=>?@\\[\\]^_`{|}~]*\$",
   );
+
   static bool onlyContainsEnglish(String text) {
     return _englishMatcherRegex.hasMatch(text);
   }

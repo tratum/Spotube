@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class SectionCardWithHeading extends StatelessWidget {
   final String heading;
   final List<Widget> children;
+
   const SectionCardWithHeading({
     super.key,
     required this.heading,

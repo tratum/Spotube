@@ -5,6 +5,7 @@ import 'package:spotube/provider/spotify/spotify.dart';
 
 class ArtistPageRelatedArtists extends ConsumerWidget {
   final String artistId;
+
   const ArtistPageRelatedArtists({
     super.key,
     required this.artistId,

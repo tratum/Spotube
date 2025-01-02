@@ -38,6 +38,7 @@ import 'package:url_launcher/url_launcher_string.dart';
 class PlayerView extends HookConsumerWidget {
   final PanelController panelController;
   final ScrollController scrollController;
+
   const PlayerView({
     super.key,
     required this.panelController,
@@ -103,8 +104,10 @@ class PlayerView extends HookConsumerWidget {
 
     return AppPopScope(
       canPop: context.canPop(),
-      onPopInvoked: (didPop) async {
-        await panelController.close();
+      onPopInvokedWithResult: (bool canPop, Object? result) async {
+        if (canPop) {
+          await panelController.close(); // Handle the result as needed
+        }
       },
       child: IconTheme(
         data: theme.iconTheme.copyWith(color: bodyTextColor),

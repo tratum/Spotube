@@ -12,6 +12,7 @@ class LinkText<T> extends StatelessWidget {
   final T? extra;
 
   final bool push;
+
   const LinkText(
     this.text,
     this.route, {

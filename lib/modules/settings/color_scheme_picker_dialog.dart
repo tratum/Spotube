@@ -114,6 +114,7 @@ class ColorTile extends StatelessWidget {
   final void Function()? onPressed;
   final String? tooltip;
   final bool isCompact;
+
   const ColorTile({
     required this.color,
     this.isActive = false,

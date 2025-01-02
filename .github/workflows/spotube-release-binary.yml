@@ -98,7 +98,7 @@ jobs:
         run: |
           echo '${{ secrets.KEYSTORE }}' | base64 --decode > android/app/upload-keystore.jks
           echo '${{ secrets.KEY_PROPERTIES }}' > android/key.properties
-      
+
       - name: Unessary hosted tools
         if: ${{matrix.platform == 'linux_arm'}}
         uses: jlumbroso/free-disk-space@main
@@ -110,13 +110,13 @@ jobs:
           haskell: true
           large-packages: true
           docker-images: true
-      
+
       - name: Build ${{matrix.platform}} binaries
         run: dart cli/cli.dart build ${{matrix.platform}}
         env:
           CHANNEL: ${{inputs.channel}}
           DOTENV: ${{secrets.DOTENV_RELEASE}}
-      
+
       - uses: actions/upload-artifact@v3
         with:
           if-no-files-found: error
@@ -149,7 +149,7 @@ jobs:
           md5sum Spotube-Release-Binaries/* >> RELEASE.md5sum
           sha256sum Spotube-Release-Binaries/* >> RELEASE.sha256sum
           sed -i 's|Spotube-Release-Binaries/||' RELEASE.sha256sum RELEASE.md5sum
-      
+
       - name: Extract pubspec version
         run: |
           echo "PUBSPEC_VERSION=$(grep -oP 'version:\s*\K[^+]+(?=\+)' pubspec.yaml)" >> $GITHUB_ENV

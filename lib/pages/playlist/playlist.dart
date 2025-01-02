@@ -14,6 +14,7 @@ class PlaylistPage extends HookConsumerWidget {
   static const name = "playlist";
 
   final PlaylistSimple _playlist;
+
   const PlaylistPage({
     super.key,
     required PlaylistSimple playlist,

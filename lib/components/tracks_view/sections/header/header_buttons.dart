@@ -19,6 +19,7 @@ import 'package:spotube/services/audio_player/audio_player.dart';
 class TrackViewHeaderButtons extends HookConsumerWidget {
   final PaletteColor color;
   final bool compact;
+
   const TrackViewHeaderButtons({
     super.key,
     required this.color,

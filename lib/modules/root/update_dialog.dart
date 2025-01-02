@@ -9,6 +9,7 @@ class RootAppUpdateDialog extends StatelessWidget {
   final int? nightlyBuildNum;
 
   const RootAppUpdateDialog({super.key, this.version}) : nightlyBuildNum = null;
+
   const RootAppUpdateDialog.nightly({super.key, required this.nightlyBuildNum})
       : version = null;
 

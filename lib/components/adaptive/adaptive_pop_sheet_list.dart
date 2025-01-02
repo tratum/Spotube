@@ -6,6 +6,7 @@ _emptyCB() {}
 
 class PopSheetEntry<T> extends ListTile {
   final T? value;
+
   const PopSheetEntry({
     this.value,
     super.key,
@@ -201,6 +202,7 @@ class AdaptivePopSheetList<T> extends StatelessWidget {
 class _AdaptivePopSheetListItem<T> extends StatelessWidget {
   final PopSheetEntry<T> item;
   final ValueChanged<T>? onSelected;
+
   const _AdaptivePopSheetListItem({
     super.key,
     required this.item,

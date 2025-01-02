@@ -11,6 +11,7 @@ class Action extends StatelessWidget {
   final void Function() onPressed;
   final bool isExpanded;
   final Color? backgroundColor;
+
   const Action({
     super.key,
     required this.icon,
@@ -50,6 +51,7 @@ class Action extends StatelessWidget {
 class AdaptiveActions extends HookWidget {
   final List<Action> actions;
   final bool? breakOn;
+
   const AdaptiveActions({
     required this.actions,
     this.breakOn,

@@ -14,7 +14,7 @@
 /// watchakorn-18k@github => Thai
 /// Microsoft Copilot, Tutislav@github => Czech
 
-library l10n;
+library;
 
 import 'package:flutter/material.dart';
 

@@ -35,7 +35,9 @@ WebSocketLoadEventData _$WebSocketLoadEventDataFromJson(
 mixin _$WebSocketLoadEventData {
   @JsonKey(name: 'tracks', toJson: _tracksJson)
   List<Track> get tracks => throw _privateConstructorUsedError;
+
   Object? get collection => throw _privateConstructorUsedError;
+
   int? get initialIndex => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -51,6 +53,7 @@ mixin _$WebSocketLoadEventData {
         album,
   }) =>
       throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
@@ -127,9 +130,9 @@ class _$WebSocketLoadEventDataCopyWithImpl<$Res,
     implements $WebSocketLoadEventDataCopyWith<$Res> {
   _$WebSocketLoadEventDataCopyWithImpl(this._value, this._then);
 
-  // ignore: unused_field
+// ignore: unused_field
   final $Val _value;
-  // ignore: unused_field
+// ignore: unused_field
   final $Res Function($Val) _then;
 
   /// Create a copy of WebSocketLoadEventData
@@ -227,7 +230,7 @@ class _$WebSocketLoadEventDataPlaylistImpl
   @JsonKey(name: 'tracks', toJson: _tracksJson)
   List<Track> get tracks {
     if (_tracks is EqualUnmodifiableListView) return _tracks;
-    // ignore: implicit_dynamic_type
+// ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_tracks);
   }
 
@@ -466,7 +469,7 @@ class _$WebSocketLoadEventDataAlbumImpl extends WebSocketLoadEventDataAlbum {
   @JsonKey(name: 'tracks', toJson: _tracksJson)
   List<Track> get tracks {
     if (_tracks is EqualUnmodifiableListView) return _tracks;
-    // ignore: implicit_dynamic_type
+// ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_tracks);
   }
 

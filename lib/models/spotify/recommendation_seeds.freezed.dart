@@ -17,11 +17,17 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$GeneratePlaylistProviderInput {
   Iterable<String>? get seedArtists => throw _privateConstructorUsedError;
+
   Iterable<String>? get seedGenres => throw _privateConstructorUsedError;
+
   Iterable<String>? get seedTracks => throw _privateConstructorUsedError;
+
   int get limit => throw _privateConstructorUsedError;
+
   RecommendationSeeds? get max => throw _privateConstructorUsedError;
+
   RecommendationSeeds? get min => throw _privateConstructorUsedError;
+
   RecommendationSeeds? get target => throw _privateConstructorUsedError;
 
   /// Create a copy of GeneratePlaylistProviderInput
@@ -38,6 +44,7 @@ abstract class $GeneratePlaylistProviderInputCopyWith<$Res> {
           $Res Function(GeneratePlaylistProviderInput) then) =
       _$GeneratePlaylistProviderInputCopyWithImpl<$Res,
           GeneratePlaylistProviderInput>;
+
   @useResult
   $Res call(
       {Iterable<String>? seedArtists,
@@ -49,7 +56,9 @@ abstract class $GeneratePlaylistProviderInputCopyWith<$Res> {
       RecommendationSeeds? target});
 
   $RecommendationSeedsCopyWith<$Res>? get max;
+
   $RecommendationSeedsCopyWith<$Res>? get min;
+
   $RecommendationSeedsCopyWith<$Res>? get target;
 }
 
@@ -61,6 +70,7 @@ class _$GeneratePlaylistProviderInputCopyWithImpl<$Res,
 
   // ignore: unused_field
   final $Val _value;
+
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -159,6 +169,7 @@ abstract class _$$GeneratePlaylistProviderInputImplCopyWith<$Res>
           _$GeneratePlaylistProviderInputImpl value,
           $Res Function(_$GeneratePlaylistProviderInputImpl) then) =
       __$$GeneratePlaylistProviderInputImplCopyWithImpl<$Res>;
+
   @override
   @useResult
   $Res call(
@@ -172,8 +183,10 @@ abstract class _$$GeneratePlaylistProviderInputImplCopyWith<$Res>
 
   @override
   $RecommendationSeedsCopyWith<$Res>? get max;
+
   @override
   $RecommendationSeedsCopyWith<$Res>? get min;
+
   @override
   $RecommendationSeedsCopyWith<$Res>? get target;
 }
@@ -319,16 +332,22 @@ abstract class _GeneratePlaylistProviderInput
 
   @override
   Iterable<String>? get seedArtists;
+
   @override
   Iterable<String>? get seedGenres;
+
   @override
   Iterable<String>? get seedTracks;
+
   @override
   int get limit;
+
   @override
   RecommendationSeeds? get max;
+
   @override
   RecommendationSeeds? get min;
+
   @override
   RecommendationSeeds? get target;
 
@@ -348,20 +367,33 @@ RecommendationSeeds _$RecommendationSeedsFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$RecommendationSeeds {
   num? get acousticness => throw _privateConstructorUsedError;
+
   num? get danceability => throw _privateConstructorUsedError;
+
   @JsonKey(name: "duration_ms")
   num? get durationMs => throw _privateConstructorUsedError;
+
   num? get energy => throw _privateConstructorUsedError;
+
   num? get instrumentalness => throw _privateConstructorUsedError;
+
   num? get key => throw _privateConstructorUsedError;
+
   num? get liveness => throw _privateConstructorUsedError;
+
   num? get loudness => throw _privateConstructorUsedError;
+
   num? get mode => throw _privateConstructorUsedError;
+
   num? get popularity => throw _privateConstructorUsedError;
+
   num? get speechiness => throw _privateConstructorUsedError;
+
   num? get tempo => throw _privateConstructorUsedError;
+
   @JsonKey(name: "time_signature")
   num? get timeSignature => throw _privateConstructorUsedError;
+
   num? get valence => throw _privateConstructorUsedError;
 
   /// Serializes this RecommendationSeeds to a JSON map.
@@ -379,6 +411,7 @@ abstract class $RecommendationSeedsCopyWith<$Res> {
   factory $RecommendationSeedsCopyWith(
           RecommendationSeeds value, $Res Function(RecommendationSeeds) then) =
       _$RecommendationSeedsCopyWithImpl<$Res, RecommendationSeeds>;
+
   @useResult
   $Res call(
       {num? acousticness,
@@ -404,6 +437,7 @@ class _$RecommendationSeedsCopyWithImpl<$Res, $Val extends RecommendationSeeds>
 
   // ignore: unused_field
   final $Val _value;
+
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -494,6 +528,7 @@ abstract class _$$RecommendationSeedsImplCopyWith<$Res>
   factory _$$RecommendationSeedsImplCopyWith(_$RecommendationSeedsImpl value,
           $Res Function(_$RecommendationSeedsImpl) then) =
       __$$RecommendationSeedsImplCopyWithImpl<$Res>;
+
   @override
   @useResult
   $Res call(
@@ -748,32 +783,45 @@ abstract class _RecommendationSeeds implements RecommendationSeeds {
 
   @override
   num? get acousticness;
+
   @override
   num? get danceability;
+
   @override
   @JsonKey(name: "duration_ms")
   num? get durationMs;
+
   @override
   num? get energy;
+
   @override
   num? get instrumentalness;
+
   @override
   num? get key;
+
   @override
   num? get liveness;
+
   @override
   num? get loudness;
+
   @override
   num? get mode;
+
   @override
   num? get popularity;
+
   @override
   num? get speechiness;
+
   @override
   num? get tempo;
+
   @override
   @JsonKey(name: "time_signature")
   num? get timeSignature;
+
   @override
   num? get valence;
 

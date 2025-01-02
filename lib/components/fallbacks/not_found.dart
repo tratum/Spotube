@@ -4,6 +4,7 @@ import 'package:spotube/extensions/context.dart';
 
 class NotFound extends StatelessWidget {
   final bool vertical;
+
   const NotFound({super.key, this.vertical = false});
 
   @override

@@ -7,17 +7,17 @@ import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:spotube/collections/side_bar_tiles.dart';
 import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/framework/app_pop_scope.dart';
-import 'package:spotube/modules/player/player_queue.dart';
 import 'package:spotube/components/dialogs/replace_downloaded_dialog.dart';
+import 'package:spotube/components/framework/app_pop_scope.dart';
+import 'package:spotube/extensions/context.dart';
+import 'package:spotube/hooks/configurators/use_endless_playback.dart';
+import 'package:spotube/modules/player/player_queue.dart';
 import 'package:spotube/modules/root/bottom_player.dart';
 import 'package:spotube/modules/root/sidebar.dart';
 import 'package:spotube/modules/root/spotube_navigation_bar.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/hooks/configurators/use_endless_playback.dart';
 import 'package:spotube/pages/home/home.dart';
-import 'package:spotube/provider/download_manager_provider.dart';
 import 'package:spotube/provider/audio_player/audio_player.dart';
+import 'package:spotube/provider/download_manager_provider.dart';
 import 'package:spotube/provider/server/routes/connect.dart';
 import 'package:spotube/services/connectivity_adapter.dart';
 import 'package:spotube/utils/platform.dart';
@@ -25,6 +25,7 @@ import 'package:spotube/utils/service_utils.dart';
 
 class RootApp extends HookConsumerWidget {
   final Widget child;
+
   const RootApp({
     required this.child,
     super.key,
@@ -47,7 +48,7 @@ class RootApp extends HookConsumerWidget {
       final subscriptions = [
         ConnectionCheckerService.instance.onConnectivityChanged
             .listen((status) {
-          if (status) {
+          if (status && context.mounted) {
             scaffoldMessenger.showSnackBar(
               SnackBar(
                 content: Row(
@@ -65,7 +66,7 @@ class RootApp extends HookConsumerWidget {
                 width: 350,
               ),
             );
-          } else {
+          } else if (context.mounted) {
             scaffoldMessenger.showSnackBar(
               SnackBar(
                 content: Row(
@@ -86,26 +87,28 @@ class RootApp extends HookConsumerWidget {
           }
         }),
         connectRoutes.connectClientStream.listen((clientOrigin) {
-          scaffoldMessenger.showSnackBar(
-            SnackBar(
-              backgroundColor: Colors.yellow[600],
-              behavior: SnackBarBehavior.floating,
-              content: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  const Icon(
-                    SpotubeIcons.error,
-                    color: Colors.black,
-                  ),
-                  const SizedBox(width: 10),
-                  Text(
-                    context.l10n.connect_client_alert(clientOrigin),
-                    style: const TextStyle(color: Colors.black),
-                  ),
-                ],
+          if (context.mounted) {
+            scaffoldMessenger.showSnackBar(
+              SnackBar(
+                backgroundColor: Colors.yellow[600],
+                behavior: SnackBarBehavior.floating,
+                content: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    const Icon(
+                      SpotubeIcons.error,
+                      color: Colors.black,
+                    ),
+                    const SizedBox(width: 10),
+                    Text(
+                      context.l10n.connect_client_alert(clientOrigin),
+                      style: const TextStyle(color: Colors.black),
+                    ),
+                  ],
+                ),
               ),
-            ),
-          );
+            );
+          }
         })
       ];
 
@@ -220,8 +223,8 @@ class RootApp extends HookConsumerWidget {
 
     return AppPopScope(
       canPop: canPop,
-      onPopInvoked: (didPop) {
-        if (didPop) return;
+      onPopInvokedWithResult: (bool canPop, Object? result) {
+        if (canPop) return;
 
         if (topRoute?.name == HomePage.name) {
           SystemNavigator.pop();

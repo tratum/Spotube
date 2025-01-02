@@ -35,6 +35,7 @@ class DownloadManager {
 
   final _statusStreamController =
       StreamController<DownloadStatusEvent>.broadcast();
+
   Stream<DownloadStatusEvent> get statusStream =>
       _statusStreamController.stream;
 

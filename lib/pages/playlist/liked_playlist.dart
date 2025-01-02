@@ -10,6 +10,7 @@ class LikedPlaylistPage extends HookConsumerWidget {
   static const name = PlaylistPage.name;
 
   final PlaylistSimple playlist;
+
   const LikedPlaylistPage({
     super.key,
     required this.playlist,

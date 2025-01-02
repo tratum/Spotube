@@ -3,11 +3,9 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:gap/gap.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:skeletonizer/skeletonizer.dart';
-
 import 'package:spotube/components/titlebar/titlebar.dart';
-import 'package:spotube/modules/artist/artist_album_list.dart';
 import 'package:spotube/extensions/context.dart';
-
+import 'package:spotube/modules/artist/artist_album_list.dart';
 import 'package:spotube/pages/artist/section/footer.dart';
 import 'package:spotube/pages/artist/section/header.dart';
 import 'package:spotube/pages/artist/section/related_artists.dart';
@@ -18,6 +16,7 @@ class ArtistPage extends HookConsumerWidget {
   static const name = "artist";
 
   final String artistId;
+
   const ArtistPage(this.artistId, {super.key});
 
   @override

@@ -1,4 +1,4 @@
-library bordered_text;
+library;
 
 import 'package:flutter/widgets.dart';
 

@@ -11,6 +11,7 @@ import 'package:spotube/provider/scrobbler/scrobbler.dart';
 
 class LastFMLoginPage extends HookConsumerWidget {
   static const name = "lastfm_login";
+
   const LastFMLoginPage({super.key});
 
   @override

@@ -18,10 +18,12 @@ import 'package:spotube/utils/service_utils.dart';
 
 class PlaylistCard extends HookConsumerWidget {
   final PlaylistSimple playlist;
+
   const PlaylistCard(
     this.playlist, {
     super.key,
   });
+
   @override
   Widget build(BuildContext context, ref) {
     final playlistQueue = ref.watch(audioPlayerProvider);

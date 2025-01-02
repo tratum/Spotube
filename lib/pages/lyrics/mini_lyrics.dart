@@ -5,11 +5,11 @@ import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:palette_generator/palette_generator.dart';
 import 'package:spotube/collections/spotube_icons.dart';
+import 'package:spotube/extensions/context.dart';
+import 'package:spotube/hooks/utils/use_force_update.dart';
 import 'package:spotube/modules/player/player_controls.dart';
 import 'package:spotube/modules/player/player_queue.dart';
 import 'package:spotube/modules/root/sidebar.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/hooks/utils/use_force_update.dart';
 import 'package:spotube/pages/lyrics/plain_lyrics.dart';
 import 'package:spotube/pages/lyrics/synced_lyrics.dart';
 import 'package:spotube/provider/audio_player/audio_player.dart';
@@ -20,6 +20,7 @@ class MiniLyricsPage extends HookConsumerWidget {
   static const name = "mini_lyrics";
 
   final Size prevSize;
+
   const MiniLyricsPage({super.key, required this.prevSize});
 
   @override
@@ -42,8 +43,6 @@ class MiniLyricsPage extends HookConsumerWidget {
       }
       return null;
     }, []);
-
-  
 
     return MouseRegion(
       onEnter: !hoverMode.value

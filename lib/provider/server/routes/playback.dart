@@ -25,7 +25,9 @@ import 'package:spotube/utils/service_utils.dart';
 
 class ServerPlaybackRoutes {
   final Ref ref;
+
   UserPreferences get userPreferences => ref.read(userPreferencesProvider);
+
   AudioPlayerState get playlist => ref.read(audioPlayerProvider);
   final Dio dio;
 

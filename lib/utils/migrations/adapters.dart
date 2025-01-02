@@ -1,14 +1,14 @@
-import 'package:hive/hive.dart';
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hive/hive.dart';
 import 'package:spotify/spotify.dart';
 import 'package:spotube/modules/settings/color_scheme_picker_dialog.dart';
 import 'package:spotube/services/sourced_track/enums.dart';
 
-part 'adapters.g.dart';
 part 'adapters.freezed.dart';
+part 'adapters.g.dart';
 
 @HiveType(typeId: 2)
 class SkipSegment {
@@ -16,10 +16,12 @@ class SkipSegment {
   final int start;
   @HiveField(1)
   final int end;
+
   SkipSegment(this.start, this.end);
 
   static String version = 'v1';
   static final boxName = "oss.krtirtho.spotube.skip_segments.$version";
+
   static LazyBox get box => Hive.lazyBox(boxName);
 
   SkipSegment.fromJson(Map<String, dynamic> json)
@@ -37,10 +39,8 @@ class SkipSegment {
 enum SourceType {
   @HiveField(0)
   youtube._("YouTube"),
-
   @HiveField(1)
   youtubeMusic._("YouTube Music"),
-
   @HiveField(2)
   jiosaavn._("JioSaavn");
 
@@ -139,6 +139,7 @@ enum MusicCodec {
   weba._("WebA (Best for streamed music)\nDoesn't support audio metadata");
 
   final String label;
+
   const MusicCodec._(this.label);
 }
 
@@ -196,6 +197,7 @@ class UserPreferences with _$UserPreferences {
     @Default(true) bool endlessPlayback,
     @Default(false) bool enableConnect,
   }) = _UserPreferences;
+
   factory UserPreferences.fromJson(Map<String, dynamic> json) =>
       _$UserPreferencesFromJson(json);
 
@@ -287,6 +289,7 @@ class PlaybackHistoryItem with _$PlaybackHistoryItem {
 
 class PlaybackHistoryState {
   final List<PlaybackHistoryItem> items;
+
   const PlaybackHistoryState({this.items = const []});
 
   factory PlaybackHistoryState.fromJson(Map<String, dynamic> json) {

@@ -14,6 +14,7 @@ class WindowButtonContext {
   MouseState mouseState;
   Color? backgroundColor;
   Color iconColor;
+
   WindowButtonContext(
       {required this.context,
       required this.mouseState,
@@ -28,6 +29,7 @@ class WindowButtonColors {
   late Color iconNormal;
   late Color iconMouseOver;
   late Color iconMouseDown;
+
   WindowButtonColors(
       {Color? normal,
       Color? mouseOver,

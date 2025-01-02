@@ -1,21 +1,16 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 
-/// A temporary workaround for [WillPopScope] and [PopScope] not working in GoRouter
-/// https://github.com/flutter/flutter/issues/140869#issuecomment-2247181468
 class AppPopScope extends StatefulWidget {
   final Widget child;
-
-  final PopInvokedCallback? onPopInvoked;
-
+  final PopInvokedWithResultCallback<Object?>? onPopInvokedWithResult;
   final bool canPop;
 
   const AppPopScope({
     super.key,
     required this.child,
     this.canPop = true,
-    this.onPopInvoked,
+    this.onPopInvokedWithResult,
   });
 
   @override
@@ -57,7 +52,7 @@ class _AppPopScopeState extends State<AppPopScope> {
   Widget build(BuildContext context) {
     return PopScope(
       canPop: widget.canPop,
-      onPopInvoked: widget.onPopInvoked,
+      onPopInvokedWithResult: widget.onPopInvokedWithResult,
       child: widget.child,
     );
   }
@@ -94,7 +89,9 @@ class _AppPopScopeState extends State<AppPopScope> {
 
   Future<bool> _handleBackButton() async {
     if (_onlyRoute) {
-      widget.onPopInvoked?.call(widget.canPop);
+      // Passing both arguments to the callback
+      widget.onPopInvokedWithResult?.call(widget.canPop,
+          null); // Use a placeholder value for the second argument
       if (!widget.canPop) {
         return true;
       }

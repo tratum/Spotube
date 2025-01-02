@@ -5,16 +5,7 @@ mixin SpotifyMixin<T> on AsyncNotifierBase<T> {
   SpotifyApi get spotify => ref.read(spotifyProvider);
 }
 
-extension on AutoDisposeAsyncNotifierProviderRef {
-  // When invoked keeps your provider alive for [duration]
-  void cacheFor([Duration duration = const Duration(minutes: 5)]) {
-    final link = keepAlive();
-    final timer = Timer(duration, () => link.close());
-    onDispose(() => timer.cancel());
-  }
-}
-
-extension on AutoDisposeRef {
+extension on Ref {
   // When invoked keeps your provider alive for [duration]
   void cacheFor([Duration duration = const Duration(minutes: 5)]) {
     final link = keepAlive();

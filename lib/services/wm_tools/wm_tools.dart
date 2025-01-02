@@ -29,6 +29,7 @@ class WindowSize {
 
 class WindowManagerTools with WidgetsBindingObserver {
   static WindowManagerTools? _instance;
+
   static WindowManagerTools get instance => _instance!;
 
   WindowManagerTools._();

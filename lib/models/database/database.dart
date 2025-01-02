@@ -1,4 +1,4 @@
-library database;
+library;
 
 import 'dart:convert';
 import 'dart:io';
@@ -23,20 +23,33 @@ import 'package:sqlite3_flutter_libs/sqlite3_flutter_libs.dart';
 part 'database.g.dart';
 
 part 'tables/authentication.dart';
+
 part 'tables/blacklist.dart';
+
 part 'tables/preferences.dart';
+
 part 'tables/scrobbler.dart';
+
 part 'tables/skip_segment.dart';
+
 part 'tables/source_match.dart';
+
 part 'tables/audio_player_state.dart';
+
 part 'tables/history.dart';
+
 part 'tables/lyrics.dart';
 
 part 'typeconverters/color.dart';
+
 part 'typeconverters/locale.dart';
+
 part 'typeconverters/string_list.dart';
+
 part 'typeconverters/encrypted_text.dart';
+
 part 'typeconverters/map.dart';
+
 part 'typeconverters/subtitle.dart';
 
 @DriftDatabase(

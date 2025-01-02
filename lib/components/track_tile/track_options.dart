@@ -55,6 +55,7 @@ class TrackOptions extends HookConsumerWidget {
   final String? playlistId;
   final ObjectRef<ValueChanged<RelativeRect>?>? showMenuCbRef;
   final Widget? icon;
+
   const TrackOptions({
     super.key,
     required this.track,
@@ -67,16 +68,18 @@ class TrackOptions extends HookConsumerWidget {
   void actionShare(BuildContext context, Track track) {
     final data = "https://open.spotify.com/track/${track.id}";
     Clipboard.setData(ClipboardData(text: data)).then((_) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          width: 300,
-          behavior: SnackBarBehavior.floating,
-          content: Text(
-            context.l10n.copied_to_clipboard(data),
-            textAlign: TextAlign.center,
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            width: 300,
+            behavior: SnackBarBehavior.floating,
+            content: Text(
+              context.l10n.copied_to_clipboard(data),
+              textAlign: TextAlign.center,
+            ),
           ),
-        ),
-      );
+        );
+      }
     });
   }
 

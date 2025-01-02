@@ -107,10 +107,12 @@ class BottomPlayer extends HookConsumerWidget {
                             await Future.delayed(
                               const Duration(milliseconds: 100),
                               () async {
-                                GoRouter.of(context).go(
-                                  '/mini-player',
-                                  extra: prevSize,
-                                );
+                                if (context.mounted) {
+                                  GoRouter.of(context).go(
+                                    '/mini-player',
+                                    extra: prevSize,
+                                  );
+                                }
                               },
                             );
                           },

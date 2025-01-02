@@ -15,6 +15,7 @@ import 'package:spotube/utils/service_utils.dart';
 
 class DownloadItem extends HookConsumerWidget {
   final Track track;
+
   const DownloadItem({
     super.key,
     required this.track,

@@ -8,6 +8,7 @@ import 'package:spotube/utils/service_utils.dart';
 
 class AnonymousFallback extends ConsumerWidget {
   final Widget? child;
+
   const AnonymousFallback({
     super.key,
     this.child,

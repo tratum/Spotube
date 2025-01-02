@@ -23,6 +23,7 @@ class PlaylistCreateDialog extends HookConsumerWidget {
   /// Track ids to add to the playlist
   final List<String> trackIds;
   final String? playlistId;
+
   PlaylistCreateDialog({
     super.key,
     this.trackIds = const [],

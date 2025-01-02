@@ -24,6 +24,7 @@ extension FormattedAlbumType on AlbumType {
 
 class AlbumCard extends HookConsumerWidget {
   final AlbumSimple album;
+
   const AlbumCard(
     this.album, {
     super.key,

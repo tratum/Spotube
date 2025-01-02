@@ -22,11 +22,16 @@ SpotifySectionPlaylist _$SpotifySectionPlaylistFromJson(
 /// @nodoc
 mixin _$SpotifySectionPlaylist {
   String get description => throw _privateConstructorUsedError;
+
   String get format => throw _privateConstructorUsedError;
+
   List<SpotifySectionItemImage> get images =>
       throw _privateConstructorUsedError;
+
   String get name => throw _privateConstructorUsedError;
+
   String get owner => throw _privateConstructorUsedError;
+
   String get uri => throw _privateConstructorUsedError;
 
   /// Serializes this SpotifySectionPlaylist to a JSON map.
@@ -44,6 +49,7 @@ abstract class $SpotifySectionPlaylistCopyWith<$Res> {
   factory $SpotifySectionPlaylistCopyWith(SpotifySectionPlaylist value,
           $Res Function(SpotifySectionPlaylist) then) =
       _$SpotifySectionPlaylistCopyWithImpl<$Res, SpotifySectionPlaylist>;
+
   @useResult
   $Res call(
       {String description,
@@ -62,6 +68,7 @@ class _$SpotifySectionPlaylistCopyWithImpl<$Res,
 
   // ignore: unused_field
   final $Val _value;
+
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -113,6 +120,7 @@ abstract class _$$SpotifySectionPlaylistImplCopyWith<$Res>
           _$SpotifySectionPlaylistImpl value,
           $Res Function(_$SpotifySectionPlaylistImpl) then) =
       __$$SpotifySectionPlaylistImplCopyWithImpl<$Res>;
+
   @override
   @useResult
   $Res call(
@@ -196,6 +204,7 @@ class _$SpotifySectionPlaylistImpl extends _SpotifySectionPlaylist {
   @override
   final String format;
   final List<SpotifySectionItemImage> _images;
+
   @override
   List<SpotifySectionItemImage> get images {
     if (_images is EqualUnmodifiableListView) return _images;
@@ -259,6 +268,7 @@ abstract class _SpotifySectionPlaylist extends SpotifySectionPlaylist {
       required final String name,
       required final String owner,
       required final String uri}) = _$SpotifySectionPlaylistImpl;
+
   const _SpotifySectionPlaylist._() : super._();
 
   factory _SpotifySectionPlaylist.fromJson(Map<String, dynamic> json) =
@@ -266,14 +276,19 @@ abstract class _SpotifySectionPlaylist extends SpotifySectionPlaylist {
 
   @override
   String get description;
+
   @override
   String get format;
+
   @override
   List<SpotifySectionItemImage> get images;
+
   @override
   String get name;
+
   @override
   String get owner;
+
   @override
   String get uri;
 
@@ -292,7 +307,9 @@ SpotifySectionArtist _$SpotifySectionArtistFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$SpotifySectionArtist {
   String get name => throw _privateConstructorUsedError;
+
   String get uri => throw _privateConstructorUsedError;
+
   List<SpotifySectionItemImage> get images =>
       throw _privateConstructorUsedError;
 
@@ -311,6 +328,7 @@ abstract class $SpotifySectionArtistCopyWith<$Res> {
   factory $SpotifySectionArtistCopyWith(SpotifySectionArtist value,
           $Res Function(SpotifySectionArtist) then) =
       _$SpotifySectionArtistCopyWithImpl<$Res, SpotifySectionArtist>;
+
   @useResult
   $Res call({String name, String uri, List<SpotifySectionItemImage> images});
 }
@@ -323,6 +341,7 @@ class _$SpotifySectionArtistCopyWithImpl<$Res,
 
   // ignore: unused_field
   final $Val _value;
+
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -358,6 +377,7 @@ abstract class _$$SpotifySectionArtistImplCopyWith<$Res>
   factory _$$SpotifySectionArtistImplCopyWith(_$SpotifySectionArtistImpl value,
           $Res Function(_$SpotifySectionArtistImpl) then) =
       __$$SpotifySectionArtistImplCopyWithImpl<$Res>;
+
   @override
   @useResult
   $Res call({String name, String uri, List<SpotifySectionItemImage> images});
@@ -415,6 +435,7 @@ class _$SpotifySectionArtistImpl extends _SpotifySectionArtist {
   @override
   final String uri;
   final List<SpotifySectionItemImage> _images;
+
   @override
   List<SpotifySectionItemImage> get images {
     if (_images is EqualUnmodifiableListView) return _images;
@@ -466,6 +487,7 @@ abstract class _SpotifySectionArtist extends SpotifySectionArtist {
           required final String uri,
           required final List<SpotifySectionItemImage> images}) =
       _$SpotifySectionArtistImpl;
+
   const _SpotifySectionArtist._() : super._();
 
   factory _SpotifySectionArtist.fromJson(Map<String, dynamic> json) =
@@ -473,8 +495,10 @@ abstract class _SpotifySectionArtist extends SpotifySectionArtist {
 
   @override
   String get name;
+
   @override
   String get uri;
+
   @override
   List<SpotifySectionItemImage> get images;
 
@@ -494,9 +518,12 @@ SpotifySectionAlbum _$SpotifySectionAlbumFromJson(Map<String, dynamic> json) {
 mixin _$SpotifySectionAlbum {
   List<SpotifySectionAlbumArtist> get artists =>
       throw _privateConstructorUsedError;
+
   List<SpotifySectionItemImage> get images =>
       throw _privateConstructorUsedError;
+
   String get name => throw _privateConstructorUsedError;
+
   String get uri => throw _privateConstructorUsedError;
 
   /// Serializes this SpotifySectionAlbum to a JSON map.
@@ -514,6 +541,7 @@ abstract class $SpotifySectionAlbumCopyWith<$Res> {
   factory $SpotifySectionAlbumCopyWith(
           SpotifySectionAlbum value, $Res Function(SpotifySectionAlbum) then) =
       _$SpotifySectionAlbumCopyWithImpl<$Res, SpotifySectionAlbum>;
+
   @useResult
   $Res call(
       {List<SpotifySectionAlbumArtist> artists,
@@ -529,6 +557,7 @@ class _$SpotifySectionAlbumCopyWithImpl<$Res, $Val extends SpotifySectionAlbum>
 
   // ignore: unused_field
   final $Val _value;
+
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -569,6 +598,7 @@ abstract class _$$SpotifySectionAlbumImplCopyWith<$Res>
   factory _$$SpotifySectionAlbumImplCopyWith(_$SpotifySectionAlbumImpl value,
           $Res Function(_$SpotifySectionAlbumImpl) then) =
       __$$SpotifySectionAlbumImplCopyWithImpl<$Res>;
+
   @override
   @useResult
   $Res call(
@@ -633,6 +663,7 @@ class _$SpotifySectionAlbumImpl extends _SpotifySectionAlbum {
       _$$SpotifySectionAlbumImplFromJson(json);
 
   final List<SpotifySectionAlbumArtist> _artists;
+
   @override
   List<SpotifySectionAlbumArtist> get artists {
     if (_artists is EqualUnmodifiableListView) return _artists;
@@ -641,6 +672,7 @@ class _$SpotifySectionAlbumImpl extends _SpotifySectionAlbum {
   }
 
   final List<SpotifySectionItemImage> _images;
+
   @override
   List<SpotifySectionItemImage> get images {
     if (_images is EqualUnmodifiableListView) return _images;
@@ -701,6 +733,7 @@ abstract class _SpotifySectionAlbum extends SpotifySectionAlbum {
       required final List<SpotifySectionItemImage> images,
       required final String name,
       required final String uri}) = _$SpotifySectionAlbumImpl;
+
   const _SpotifySectionAlbum._() : super._();
 
   factory _SpotifySectionAlbum.fromJson(Map<String, dynamic> json) =
@@ -708,10 +741,13 @@ abstract class _SpotifySectionAlbum extends SpotifySectionAlbum {
 
   @override
   List<SpotifySectionAlbumArtist> get artists;
+
   @override
   List<SpotifySectionItemImage> get images;
+
   @override
   String get name;
+
   @override
   String get uri;
 
@@ -731,6 +767,7 @@ SpotifySectionAlbumArtist _$SpotifySectionAlbumArtistFromJson(
 /// @nodoc
 mixin _$SpotifySectionAlbumArtist {
   String get name => throw _privateConstructorUsedError;
+
   String get uri => throw _privateConstructorUsedError;
 
   /// Serializes this SpotifySectionAlbumArtist to a JSON map.
@@ -748,6 +785,7 @@ abstract class $SpotifySectionAlbumArtistCopyWith<$Res> {
   factory $SpotifySectionAlbumArtistCopyWith(SpotifySectionAlbumArtist value,
           $Res Function(SpotifySectionAlbumArtist) then) =
       _$SpotifySectionAlbumArtistCopyWithImpl<$Res, SpotifySectionAlbumArtist>;
+
   @useResult
   $Res call({String name, String uri});
 }
@@ -760,6 +798,7 @@ class _$SpotifySectionAlbumArtistCopyWithImpl<$Res,
 
   // ignore: unused_field
   final $Val _value;
+
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -791,6 +830,7 @@ abstract class _$$SpotifySectionAlbumArtistImplCopyWith<$Res>
           _$SpotifySectionAlbumArtistImpl value,
           $Res Function(_$SpotifySectionAlbumArtistImpl) then) =
       __$$SpotifySectionAlbumArtistImplCopyWithImpl<$Res>;
+
   @override
   @useResult
   $Res call({String name, String uri});
@@ -880,6 +920,7 @@ abstract class _SpotifySectionAlbumArtist extends SpotifySectionAlbumArtist {
   const factory _SpotifySectionAlbumArtist(
       {required final String name,
       required final String uri}) = _$SpotifySectionAlbumArtistImpl;
+
   const _SpotifySectionAlbumArtist._() : super._();
 
   factory _SpotifySectionAlbumArtist.fromJson(Map<String, dynamic> json) =
@@ -887,6 +928,7 @@ abstract class _SpotifySectionAlbumArtist extends SpotifySectionAlbumArtist {
 
   @override
   String get name;
+
   @override
   String get uri;
 
@@ -906,7 +948,9 @@ SpotifySectionItemImage _$SpotifySectionItemImageFromJson(
 /// @nodoc
 mixin _$SpotifySectionItemImage {
   num? get height => throw _privateConstructorUsedError;
+
   String get url => throw _privateConstructorUsedError;
+
   num? get width => throw _privateConstructorUsedError;
 
   /// Serializes this SpotifySectionItemImage to a JSON map.
@@ -924,6 +968,7 @@ abstract class $SpotifySectionItemImageCopyWith<$Res> {
   factory $SpotifySectionItemImageCopyWith(SpotifySectionItemImage value,
           $Res Function(SpotifySectionItemImage) then) =
       _$SpotifySectionItemImageCopyWithImpl<$Res, SpotifySectionItemImage>;
+
   @useResult
   $Res call({num? height, String url, num? width});
 }
@@ -936,6 +981,7 @@ class _$SpotifySectionItemImageCopyWithImpl<$Res,
 
   // ignore: unused_field
   final $Val _value;
+
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -972,6 +1018,7 @@ abstract class _$$SpotifySectionItemImageImplCopyWith<$Res>
           _$SpotifySectionItemImageImpl value,
           $Res Function(_$SpotifySectionItemImageImpl) then) =
       __$$SpotifySectionItemImageImplCopyWithImpl<$Res>;
+
   @override
   @useResult
   $Res call({num? height, String url, num? width});
@@ -1071,6 +1118,7 @@ abstract class _SpotifySectionItemImage extends SpotifySectionItemImage {
       {required final num? height,
       required final String url,
       required final num? width}) = _$SpotifySectionItemImageImpl;
+
   const _SpotifySectionItemImage._() : super._();
 
   factory _SpotifySectionItemImage.fromJson(Map<String, dynamic> json) =
@@ -1078,8 +1126,10 @@ abstract class _SpotifySectionItemImage extends SpotifySectionItemImage {
 
   @override
   num? get height;
+
   @override
   String get url;
+
   @override
   num? get width;
 
@@ -1099,8 +1149,11 @@ SpotifyHomeFeedSectionItem _$SpotifyHomeFeedSectionItemFromJson(
 /// @nodoc
 mixin _$SpotifyHomeFeedSectionItem {
   String get typename => throw _privateConstructorUsedError;
+
   SpotifySectionPlaylist? get playlist => throw _privateConstructorUsedError;
+
   SpotifySectionArtist? get artist => throw _privateConstructorUsedError;
+
   SpotifySectionAlbum? get album => throw _privateConstructorUsedError;
 
   /// Serializes this SpotifyHomeFeedSectionItem to a JSON map.
@@ -1119,6 +1172,7 @@ abstract class $SpotifyHomeFeedSectionItemCopyWith<$Res> {
           $Res Function(SpotifyHomeFeedSectionItem) then) =
       _$SpotifyHomeFeedSectionItemCopyWithImpl<$Res,
           SpotifyHomeFeedSectionItem>;
+
   @useResult
   $Res call(
       {String typename,
@@ -1127,7 +1181,9 @@ abstract class $SpotifyHomeFeedSectionItemCopyWith<$Res> {
       SpotifySectionAlbum? album});
 
   $SpotifySectionPlaylistCopyWith<$Res>? get playlist;
+
   $SpotifySectionArtistCopyWith<$Res>? get artist;
+
   $SpotifySectionAlbumCopyWith<$Res>? get album;
 }
 
@@ -1139,6 +1195,7 @@ class _$SpotifyHomeFeedSectionItemCopyWithImpl<$Res,
 
   // ignore: unused_field
   final $Val _value;
+
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -1222,6 +1279,7 @@ abstract class _$$SpotifyHomeFeedSectionItemImplCopyWith<$Res>
           _$SpotifyHomeFeedSectionItemImpl value,
           $Res Function(_$SpotifyHomeFeedSectionItemImpl) then) =
       __$$SpotifyHomeFeedSectionItemImplCopyWithImpl<$Res>;
+
   @override
   @useResult
   $Res call(
@@ -1232,8 +1290,10 @@ abstract class _$$SpotifyHomeFeedSectionItemImplCopyWith<$Res>
 
   @override
   $SpotifySectionPlaylistCopyWith<$Res>? get playlist;
+
   @override
   $SpotifySectionArtistCopyWith<$Res>? get artist;
+
   @override
   $SpotifySectionAlbumCopyWith<$Res>? get album;
 }
@@ -1351,10 +1411,13 @@ abstract class _SpotifyHomeFeedSectionItem
 
   @override
   String get typename;
+
   @override
   SpotifySectionPlaylist? get playlist;
+
   @override
   SpotifySectionArtist? get artist;
+
   @override
   SpotifySectionAlbum? get album;
 
@@ -1374,8 +1437,11 @@ SpotifyHomeFeedSection _$SpotifyHomeFeedSectionFromJson(
 /// @nodoc
 mixin _$SpotifyHomeFeedSection {
   String get typename => throw _privateConstructorUsedError;
+
   String? get title => throw _privateConstructorUsedError;
+
   String get uri => throw _privateConstructorUsedError;
+
   List<SpotifyHomeFeedSectionItem> get items =>
       throw _privateConstructorUsedError;
 
@@ -1394,6 +1460,7 @@ abstract class $SpotifyHomeFeedSectionCopyWith<$Res> {
   factory $SpotifyHomeFeedSectionCopyWith(SpotifyHomeFeedSection value,
           $Res Function(SpotifyHomeFeedSection) then) =
       _$SpotifyHomeFeedSectionCopyWithImpl<$Res, SpotifyHomeFeedSection>;
+
   @useResult
   $Res call(
       {String typename,
@@ -1410,6 +1477,7 @@ class _$SpotifyHomeFeedSectionCopyWithImpl<$Res,
 
   // ignore: unused_field
   final $Val _value;
+
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -1451,6 +1519,7 @@ abstract class _$$SpotifyHomeFeedSectionImplCopyWith<$Res>
           _$SpotifyHomeFeedSectionImpl value,
           $Res Function(_$SpotifyHomeFeedSectionImpl) then) =
       __$$SpotifyHomeFeedSectionImplCopyWithImpl<$Res>;
+
   @override
   @useResult
   $Res call(
@@ -1521,6 +1590,7 @@ class _$SpotifyHomeFeedSectionImpl implements _SpotifyHomeFeedSection {
   @override
   final String uri;
   final List<SpotifyHomeFeedSectionItem> _items;
+
   @override
   List<SpotifyHomeFeedSectionItem> get items {
     if (_items is EqualUnmodifiableListView) return _items;
@@ -1580,10 +1650,13 @@ abstract class _SpotifyHomeFeedSection implements SpotifyHomeFeedSection {
 
   @override
   String get typename;
+
   @override
   String? get title;
+
   @override
   String get uri;
+
   @override
   List<SpotifyHomeFeedSectionItem> get items;
 
@@ -1602,6 +1675,7 @@ SpotifyHomeFeed _$SpotifyHomeFeedFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$SpotifyHomeFeed {
   String get greeting => throw _privateConstructorUsedError;
+
   List<SpotifyHomeFeedSection> get sections =>
       throw _privateConstructorUsedError;
 
@@ -1620,6 +1694,7 @@ abstract class $SpotifyHomeFeedCopyWith<$Res> {
   factory $SpotifyHomeFeedCopyWith(
           SpotifyHomeFeed value, $Res Function(SpotifyHomeFeed) then) =
       _$SpotifyHomeFeedCopyWithImpl<$Res, SpotifyHomeFeed>;
+
   @useResult
   $Res call({String greeting, List<SpotifyHomeFeedSection> sections});
 }
@@ -1631,6 +1706,7 @@ class _$SpotifyHomeFeedCopyWithImpl<$Res, $Val extends SpotifyHomeFeed>
 
   // ignore: unused_field
   final $Val _value;
+
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -1661,6 +1737,7 @@ abstract class _$$SpotifyHomeFeedImplCopyWith<$Res>
   factory _$$SpotifyHomeFeedImplCopyWith(_$SpotifyHomeFeedImpl value,
           $Res Function(_$SpotifyHomeFeedImpl) then) =
       __$$SpotifyHomeFeedImplCopyWithImpl<$Res>;
+
   @override
   @useResult
   $Res call({String greeting, List<SpotifyHomeFeedSection> sections});
@@ -1709,6 +1786,7 @@ class _$SpotifyHomeFeedImpl implements _SpotifyHomeFeed {
   @override
   final String greeting;
   final List<SpotifyHomeFeedSection> _sections;
+
   @override
   List<SpotifyHomeFeedSection> get sections {
     if (_sections is EqualUnmodifiableListView) return _sections;
@@ -1764,6 +1842,7 @@ abstract class _SpotifyHomeFeed implements SpotifyHomeFeed {
 
   @override
   String get greeting;
+
   @override
   List<SpotifyHomeFeedSection> get sections;
 

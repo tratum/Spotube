@@ -2,17 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 import 'package:spotube/collections/fake.dart';
+import 'package:spotube/components/titlebar/titlebar.dart';
+import 'package:spotube/extensions/constrains.dart';
 import 'package:spotube/modules/album/album_card.dart';
 import 'package:spotube/modules/artist/artist_card.dart';
 import 'package:spotube/modules/playlist/playlist_card.dart';
-import 'package:spotube/components/titlebar/titlebar.dart';
-import 'package:spotube/extensions/constrains.dart';
 import 'package:spotube/provider/spotify/views/home_section.dart';
 
 class HomeFeedSectionPage extends HookConsumerWidget {
   static const name = "home_feed_section";
 
   final String sectionUri;
+
   const HomeFeedSectionPage({super.key, required this.sectionUri});
 
   @override

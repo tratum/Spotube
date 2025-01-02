@@ -6,7 +6,9 @@ typedef MouseStateBuilderCB = Widget Function(
 class MouseState {
   bool isMouseOver = false;
   bool isMouseDown = false;
+
   MouseState();
+
   @override
   String toString() {
     return "isMouseDown: $isMouseDown - isMouseOver: $isMouseOver";
@@ -18,7 +20,9 @@ T? _ambiguate<T>(T? value) => value;
 class MouseStateBuilder extends StatefulWidget {
   final MouseStateBuilderCB builder;
   final VoidCallback? onPressed;
+
   const MouseStateBuilder({super.key, required this.builder, this.onPressed});
+
   @override
   // ignore: library_private_types_in_public_api
   _MouseStateBuilderState createState() => _MouseStateBuilderState();
@@ -26,6 +30,7 @@ class MouseStateBuilder extends StatefulWidget {
 
 class _MouseStateBuilderState extends State<MouseStateBuilder> {
   late MouseState _mouseState;
+
   _MouseStateBuilderState() {
     _mouseState = MouseState();
   }

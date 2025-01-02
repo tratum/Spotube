@@ -1,12 +1,13 @@
-import 'package:args/command_runner.dart';
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:args/command_runner.dart';
 import 'package:path/path.dart';
 
 class UntranslatedCommand extends Command {
   @override
   get name => "untranslated";
+
   @override
   get description =>
       "Generate Untranslated Messages for ChatGPT based Translation";

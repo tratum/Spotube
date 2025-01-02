@@ -9,7 +9,9 @@ import 'package:spotube/utils/service_utils.dart';
 
 class ConnectDeviceButton extends HookConsumerWidget {
   final bool _sidebar;
+
   const ConnectDeviceButton({super.key}) : _sidebar = false;
+
   const ConnectDeviceButton.sidebar({super.key}) : _sidebar = true;
 
   @override

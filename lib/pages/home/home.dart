@@ -4,6 +4,8 @@ import 'package:gap/gap.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:spotube/collections/assets.gen.dart';
 import 'package:spotube/collections/spotube_icons.dart';
+import 'package:spotube/components/titlebar/titlebar.dart';
+import 'package:spotube/extensions/constrains.dart';
 import 'package:spotube/models/database/database.dart';
 import 'package:spotube/modules/connect/connect_device.dart';
 import 'package:spotube/modules/home/sections/featured.dart';
@@ -13,8 +15,6 @@ import 'package:spotube/modules/home/sections/genres.dart';
 import 'package:spotube/modules/home/sections/made_for_user.dart';
 import 'package:spotube/modules/home/sections/new_releases.dart';
 import 'package:spotube/modules/home/sections/recent.dart';
-import 'package:spotube/components/titlebar/titlebar.dart';
-import 'package:spotube/extensions/constrains.dart';
 import 'package:spotube/pages/settings/settings.dart';
 import 'package:spotube/provider/user_preferences/user_preferences_provider.dart';
 import 'package:spotube/utils/platform.dart';
@@ -22,6 +22,7 @@ import 'package:spotube/utils/service_utils.dart';
 
 class HomePage extends HookConsumerWidget {
   static const name = "home";
+
   const HomePage({super.key});
 
   @override

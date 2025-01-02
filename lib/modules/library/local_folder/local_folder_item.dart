@@ -19,6 +19,7 @@ import 'package:spotube/provider/user_preferences/user_preferences_provider.dart
 
 class LocalFolderItem extends HookConsumerWidget {
   final String folder;
+
   const LocalFolderItem({super.key, required this.folder});
 
   @override

@@ -10,6 +10,7 @@ import 'package:window_manager/window_manager.dart';
 
 class WindowTitleBarButtons extends HookConsumerWidget {
   final Color? foregroundColor;
+
   const WindowTitleBarButtons({
     super.key,
     this.foregroundColor,

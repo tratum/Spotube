@@ -13,6 +13,7 @@ class HeartButton extends HookConsumerWidget {
   final IconData? icon;
   final Color? color;
   final String? tooltip;
+
   const HeartButton({
     required this.isLiked,
     required this.onPressed,
@@ -56,6 +57,7 @@ class HeartButton extends HookConsumerWidget {
 
 class TrackHeartButton extends HookConsumerWidget {
   final Track track;
+
   const TrackHeartButton({
     super.key,
     required this.track,

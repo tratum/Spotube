@@ -21,13 +21,21 @@ SongLink _$SongLinkFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$SongLink {
   String get displayName => throw _privateConstructorUsedError;
+
   String get linkId => throw _privateConstructorUsedError;
+
   String get platform => throw _privateConstructorUsedError;
+
   bool get show => throw _privateConstructorUsedError;
+
   String? get uniqueId => throw _privateConstructorUsedError;
+
   String? get country => throw _privateConstructorUsedError;
+
   String? get url => throw _privateConstructorUsedError;
+
   String? get nativeAppUriMobile => throw _privateConstructorUsedError;
+
   String? get nativeAppUriDesktop => throw _privateConstructorUsedError;
 
   /// Serializes this SongLink to a JSON map.
@@ -44,6 +52,7 @@ mixin _$SongLink {
 abstract class $SongLinkCopyWith<$Res> {
   factory $SongLinkCopyWith(SongLink value, $Res Function(SongLink) then) =
       _$SongLinkCopyWithImpl<$Res, SongLink>;
+
   @useResult
   $Res call(
       {String displayName,
@@ -64,6 +73,7 @@ class _$SongLinkCopyWithImpl<$Res, $Val extends SongLink>
 
   // ignore: unused_field
   final $Val _value;
+
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -129,6 +139,7 @@ abstract class _$$SongLinkImplCopyWith<$Res>
   factory _$$SongLinkImplCopyWith(
           _$SongLinkImpl value, $Res Function(_$SongLinkImpl) then) =
       __$$SongLinkImplCopyWithImpl<$Res>;
+
   @override
   @useResult
   $Res call(
@@ -307,20 +318,28 @@ abstract class _SongLink implements SongLink {
 
   @override
   String get displayName;
+
   @override
   String get linkId;
+
   @override
   String get platform;
+
   @override
   bool get show;
+
   @override
   String? get uniqueId;
+
   @override
   String? get country;
+
   @override
   String? get url;
+
   @override
   String? get nativeAppUriMobile;
+
   @override
   String? get nativeAppUriDesktop;
 

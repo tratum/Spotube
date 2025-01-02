@@ -21,36 +21,59 @@ UserPreferences _$UserPreferencesFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$UserPreferences {
   SourceQualities get audioQuality => throw _privateConstructorUsedError;
+
   bool get albumColorSync => throw _privateConstructorUsedError;
+
   bool get amoledDarkTheme => throw _privateConstructorUsedError;
+
   bool get checkUpdate => throw _privateConstructorUsedError;
+
   bool get normalizeAudio => throw _privateConstructorUsedError;
+
   bool get showSystemTrayIcon => throw _privateConstructorUsedError;
+
   bool get skipNonMusic => throw _privateConstructorUsedError;
+
   bool get systemTitleBar => throw _privateConstructorUsedError;
+
   CloseBehavior get closeBehavior => throw _privateConstructorUsedError;
+
   @JsonKey(
       fromJson: UserPreferences._accentColorSchemeFromJson,
       toJson: UserPreferences._accentColorSchemeToJson,
       readValue: UserPreferences._accentColorSchemeReadValue)
   SpotubeColor get accentColorScheme => throw _privateConstructorUsedError;
+
   LayoutMode get layoutMode => throw _privateConstructorUsedError;
+
   @JsonKey(
       fromJson: UserPreferences._localeFromJson,
       toJson: UserPreferences._localeToJson,
       readValue: UserPreferences._localeReadValue)
   Locale get locale => throw _privateConstructorUsedError;
+
   Market get recommendationMarket => throw _privateConstructorUsedError;
+
   SearchMode get searchMode => throw _privateConstructorUsedError;
+
   String get downloadLocation => throw _privateConstructorUsedError;
+
   List<String> get localLibraryLocation => throw _privateConstructorUsedError;
+
   String get pipedInstance => throw _privateConstructorUsedError;
+
   ThemeMode get themeMode => throw _privateConstructorUsedError;
+
   AudioSource get audioSource => throw _privateConstructorUsedError;
+
   SourceCodecs get streamMusicCodec => throw _privateConstructorUsedError;
+
   SourceCodecs get downloadMusicCodec => throw _privateConstructorUsedError;
+
   bool get discordPresence => throw _privateConstructorUsedError;
+
   bool get endlessPlayback => throw _privateConstructorUsedError;
+
   bool get enableConnect => throw _privateConstructorUsedError;
 
   /// Serializes this UserPreferences to a JSON map.
@@ -68,6 +91,7 @@ abstract class $UserPreferencesCopyWith<$Res> {
   factory $UserPreferencesCopyWith(
           UserPreferences value, $Res Function(UserPreferences) then) =
       _$UserPreferencesCopyWithImpl<$Res, UserPreferences>;
+
   @useResult
   $Res call(
       {SourceQualities audioQuality,
@@ -111,6 +135,7 @@ class _$UserPreferencesCopyWithImpl<$Res, $Val extends UserPreferences>
 
   // ignore: unused_field
   final $Val _value;
+
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -251,6 +276,7 @@ abstract class _$$UserPreferencesImplCopyWith<$Res>
   factory _$$UserPreferencesImplCopyWith(_$UserPreferencesImpl value,
           $Res Function(_$UserPreferencesImpl) then) =
       __$$UserPreferencesImplCopyWithImpl<$Res>;
+
   @override
   @useResult
   $Res call(
@@ -520,6 +546,7 @@ class _$UserPreferencesImpl implements _UserPreferences {
   @JsonKey()
   final String downloadLocation;
   final List<String> _localLibraryLocation;
+
   @override
   @JsonKey()
   List<String> get localLibraryLocation {
@@ -700,58 +727,81 @@ abstract class _UserPreferences implements UserPreferences {
 
   @override
   SourceQualities get audioQuality;
+
   @override
   bool get albumColorSync;
+
   @override
   bool get amoledDarkTheme;
+
   @override
   bool get checkUpdate;
+
   @override
   bool get normalizeAudio;
+
   @override
   bool get showSystemTrayIcon;
+
   @override
   bool get skipNonMusic;
+
   @override
   bool get systemTitleBar;
+
   @override
   CloseBehavior get closeBehavior;
+
   @override
   @JsonKey(
       fromJson: UserPreferences._accentColorSchemeFromJson,
       toJson: UserPreferences._accentColorSchemeToJson,
       readValue: UserPreferences._accentColorSchemeReadValue)
   SpotubeColor get accentColorScheme;
+
   @override
   LayoutMode get layoutMode;
+
   @override
   @JsonKey(
       fromJson: UserPreferences._localeFromJson,
       toJson: UserPreferences._localeToJson,
       readValue: UserPreferences._localeReadValue)
   Locale get locale;
+
   @override
   Market get recommendationMarket;
+
   @override
   SearchMode get searchMode;
+
   @override
   String get downloadLocation;
+
   @override
   List<String> get localLibraryLocation;
+
   @override
   String get pipedInstance;
+
   @override
   ThemeMode get themeMode;
+
   @override
   AudioSource get audioSource;
+
   @override
   SourceCodecs get streamMusicCodec;
+
   @override
   SourceCodecs get downloadMusicCodec;
+
   @override
   bool get discordPresence;
+
   @override
   bool get endlessPlayback;
+
   @override
   bool get enableConnect;
 
@@ -781,6 +831,7 @@ PlaybackHistoryItem _$PlaybackHistoryItemFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$PlaybackHistoryItem {
   DateTime get date => throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(DateTime date, PlaylistSimple playlist) playlist,
@@ -788,6 +839,7 @@ mixin _$PlaybackHistoryItem {
     required TResult Function(DateTime date, Track track) track,
   }) =>
       throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(DateTime date, PlaylistSimple playlist)? playlist,
@@ -803,6 +855,7 @@ mixin _$PlaybackHistoryItem {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(PlaybackHistoryPlaylist value) playlist,
@@ -810,6 +863,7 @@ mixin _$PlaybackHistoryItem {
     required TResult Function(PlaybackHistoryTrack value) track,
   }) =>
       throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(PlaybackHistoryPlaylist value)? playlist,
@@ -850,9 +904,9 @@ class _$PlaybackHistoryItemCopyWithImpl<$Res, $Val extends PlaybackHistoryItem>
     implements $PlaybackHistoryItemCopyWith<$Res> {
   _$PlaybackHistoryItemCopyWithImpl(this._value, this._then);
 
-  // ignore: unused_field
+// ignore: unused_field
   final $Val _value;
-  // ignore: unused_field
+// ignore: unused_field
   final $Res Function($Val) _then;
 
   /// Create a copy of PlaybackHistoryItem

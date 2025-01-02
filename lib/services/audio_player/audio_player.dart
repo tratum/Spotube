@@ -15,6 +15,7 @@ import 'package:spotube/services/sourced_track/sourced_track.dart';
 import 'package:spotube/utils/platform.dart';
 
 part 'audio_players_streams_mixin.dart';
+
 part 'audio_player_impl.dart';
 
 class SpotubeMedia extends mk.Media {
@@ -63,20 +64,20 @@ class SpotubeMedia extends mk.Media {
     );
   }
 
-  // @override
-  // operator ==(Object other) {
-  //   if (other is! SpotubeMedia) return false;
+// @override
+// operator ==(Object other) {
+//   if (other is! SpotubeMedia) return false;
 
-  //   final isLocal = track is LocalTrack && other.track is LocalTrack;
-  //   return isLocal
-  //       ? (other.track as LocalTrack).path == (track as LocalTrack).path
-  //       : other.track.id == track.id;
-  // }
+//   final isLocal = track is LocalTrack && other.track is LocalTrack;
+//   return isLocal
+//       ? (other.track as LocalTrack).path == (track as LocalTrack).path
+//       : other.track.id == track.id;
+// }
 
-  // @override
-  // int get hashCode => track is LocalTrack
-  //     ? (track as LocalTrack).path.hashCode
-  //     : track.id.hashCode;
+// @override
+// int get hashCode => track is LocalTrack
+//     ? (track as LocalTrack).path.hashCode
+//     : track.id.hashCode;
 }
 
 abstract class AudioPlayerInterface {

@@ -11,6 +11,7 @@ class AlbumPage extends HookConsumerWidget {
   static const name = "album";
 
   final AlbumSimple album;
+
   const AlbumPage({
     super.key,
     required this.album,

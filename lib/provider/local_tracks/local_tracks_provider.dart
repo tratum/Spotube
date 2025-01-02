@@ -14,6 +14,7 @@ import 'package:spotify/spotify.dart';
 import 'package:spotube/extensions/track.dart';
 import 'package:spotube/models/local_track.dart';
 import 'package:spotube/provider/user_preferences/user_preferences_provider.dart';
+
 // ignore: depend_on_referenced_packages
 import 'package:flutter_rust_bridge/flutter_rust_bridge.dart' show FrbException;
 

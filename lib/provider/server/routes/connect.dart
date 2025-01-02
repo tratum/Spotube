@@ -25,6 +25,7 @@ class ServerConnectRoutes {
   final Ref ref;
   final StreamController<String> _connectClientStreamController;
   final List<StreamSubscription> subscriptions;
+
   ServerConnectRoutes(this.ref)
       : _connectClientStreamController = StreamController<String>.broadcast(),
         subscriptions = [] {
@@ -38,8 +39,10 @@ class ServerConnectRoutes {
 
   AudioPlayerNotifier get audioPlayerNotifier =>
       ref.read(audioPlayerProvider.notifier);
+
   PlaybackHistoryActions get historyNotifier =>
       ref.read(playbackHistoryActionsProvider);
+
   Stream<String> get connectClientStream =>
       _connectClientStreamController.stream;
 
