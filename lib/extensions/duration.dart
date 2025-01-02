@@ -23,7 +23,7 @@ extension DurationToHumanReadableString on Duration {
     DurationLocale locale = const EnglishDurationLocale(),
     String? spacer,
     String? delimiter,
-    String? conjunction,
+    String? conjugation,
     bool abbreviated = false,
   }) =>
       prettyDuration(
@@ -33,7 +33,7 @@ extension DurationToHumanReadableString on Duration {
         locale: locale,
         spacer: spacer,
         delimiter: delimiter,
-        conjunction: conjunction,
+        conjunction: conjugation,
         abbreviated: abbreviated,
       );
 }
